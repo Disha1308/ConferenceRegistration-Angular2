@@ -1,0 +1,43 @@
+
+<h4> Register for Conference </h4>
+<div>
+    <label>Name: </label>
+    <input [(ngModel)]="participant.name" placeholder="Enter name"/>
+</div>
+<br>
+<div>
+    <label>Contact: </label>
+    <input [(ngModel)]="participant.contact" placeholder="Enter contact"/>
+</div>
+<br>
+<div>
+    <label>Address: </label>
+    <input [(ngModel)]="participant.address" placeholder="Enter address"/>
+</div>
+<br>
+<div>
+    <label>Nationality: </label>
+    <input [(ngModel)]="participant.nationality" placeholder="Enter nationality"/>
+</div>
+<br>
+<label>Status:</label>
+<div *ngFor = "let s of participantStatusList">
+	<input  type ="radio" name="category"  [value]='s' [(ngModel)]='participant.status'/>{{s}}<br>
+</div>
+<br>
+<label> Hotels List:</label>
+<div *ngFor = "let h of hotelList">
+	<input  type ="radio" name="hotel"  [value]='h' [(ngModel)]='participant.hotelpreference' />{{h}}<br>
+</div>
+<br>
+
+<label> Payment Mode:</label>
+<div *ngFor = "let p of paymentModeList">
+	<input  type ="radio" name="paymentmode"  [value]='p' [(ngModel)]='participant.paymentmode'/>{{p}}<br>
+</div>
+<br>
+<button (click)="addparticipant(participant)"> Submit </button>
+
+<div *ngIf == 'invaliddetails' >
+<p> Invalid details </p>
+</div>
