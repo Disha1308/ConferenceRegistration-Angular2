@@ -12,15 +12,30 @@ import 'rxjs/add/operator/switchMap';
   
   template: ` <div *ngIf = 'participant'>
   	      <h4> Participant Details</h4>
-  	      <label>Name : {{participant.name}}</label><br>
-  	      <label>Contact : {{participant.contact}}</label><br>
-  	      <label>Address : {{participant.address}}</label><br>
-  	      <label>Nationality : {{participant.nationality}}</label><br>
-  	      <label>Status : {{participant.status}}</label><br>  	      
-  	      <label>Hotel Preference : {{participant.hotelpreference}}</label><br>  	   
-  	    <label>Payment Mode : {{participant.paymentmode}}</label><br> 
+  	      <label><span>Name :</span> {{participant.name}}</label><br>
+  	      <label><span>Contact : </span>{{participant.contact}}</label><br>
+  	      <label><span>Address : </span>{{participant.address}}</label><br>
+  	      <label><span>Nationality :</span> {{participant.nationality}}</label><br>
+  	      <label><span>Status :</span> {{participant.status}}</label><br>  	      
+  	      <label><span>Hotel Preference :</span> {{participant.hotelpreference}}</label><br>  	   
+  	    <label><span>Payment Mode :</span> {{participant.paymentmode}}</label><br> 
   	    <button (click) = "goBack()">Go Back</button></div>
   		`,
+  		
+  styles :[`label
+{
+    display: block;
+}
+
+label span
+{
+    display: inline-block;
+    text-align: right;
+    width: 200px;
+}
+ 
+button, H4{ margin-left : 150px;}
+`],
 })
 export class ParticipantComponent  implements OnInit{ 
 	participant : Participant; 

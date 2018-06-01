@@ -1,36 +1,43 @@
 
 <h4> Register for Conference </h4>
+
+<div class="split left">
 <div>
-    <label>Name: </label>
-    <input [(ngModel)]="participant.name" placeholder="Enter name"/>
+    <label><span>Name: </span>
+    <input [(ngModel)]="participant.name" placeholder="Enter name"/></label>
 </div>
 <br>
 <div>
-    <label>Contact: </label>
-    <input [(ngModel)]="participant.contact" placeholder="Enter contact"/>
+    <label><span>Contact: </span>
+    <input [(ngModel)]="participant.contact" placeholder="Enter contact"/></label>
 </div>
 <br>
 <div>
-    <label>Address: </label>
-    <input [(ngModel)]="participant.address" placeholder="Enter address"/>
+    <label><span>Address: </span>
+    <input [(ngModel)]="participant.address" placeholder="Enter address"/></label>
 </div>
 <br>
 <div>
-    <label>Nationality: </label>
-    <input [(ngModel)]="participant.nationality" placeholder="Enter nationality"/>
+    <label> <span>Nationality: </span>
+    <input [(ngModel)]="participant.nationality" placeholder="Enter nationality"/></label>
 </div>
 <br>
+</div>
+<div class="split nearleft">
 <label>Status:</label>
 <div *ngFor = "let s of participantStatusList">
 	<input  type ="radio" name="category"  [value]='s' [(ngModel)]='participant.status'/>{{s}}<br>
 </div>
+</div>
 <br>
+<div class ="split nearright">
 <label> Hotels List:</label>
 <div *ngFor = "let h of hotelList">
 	<input  type ="radio" name="hotel"  [value]='h' [(ngModel)]='participant.hotelpreference' />{{h}}<br>
 </div>
 <br>
-
+</div>
+<div class="split right">
 <label> Payment Mode:</label>
 <div *ngFor = "let p of paymentModeList">
 	<input  type ="radio" name="paymentmode"  [value]='p' [(ngModel)]='participant.paymentmode'/>{{p}}<br>
@@ -40,4 +47,4 @@
 
 <div *ngIf = 'invaliddetails' >
 <p> Invalid details </p>
-</div>
+</div></div>

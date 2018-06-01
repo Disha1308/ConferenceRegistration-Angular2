@@ -13,7 +13,7 @@ import { RouterModule} from '@angular/router';
   imports:      [ BrowserModule, FormsModule,
   		RouterModule.forRoot([
   		{
-    		path: 'participants',
+    		path: 'participantslist',
     		component: ParticipantList
   		},
   		{

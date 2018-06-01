@@ -8,8 +8,10 @@ import { ParticipantListService } from './participant-list.service';
 @Component({
   selector: 'registration-details',
   templateUrl: './registration.component.html',
-  providers: [Participant, HotelListService, StatusListService, PaymentListService, ParticipantListService]
+  providers: [Participant, HotelListService, StatusListService, PaymentListService, ParticipantListService],
+  styleUrls: ['./registration.component.css']
 })
+
 export class RegistrationDetails implements OnInit 
 { 
  	participantStatusList :String[];

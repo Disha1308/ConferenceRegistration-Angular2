@@ -6,13 +6,19 @@ import { ParticipantListService} from './participant-list.service';
   selector: 'participant-list',
   template: ` 
   	        <h4>{{title}}</h4>
-  	     
+  	     	<div>
     		<a *ngFor="let p of participantList"  [routerLink]="['/participant', p.id]"  class="col-1-4">
     		
     		<span>{{p.id}}</span>  <span>{{p.name}}</span> <br> </a>
-    		
+    		</div>
     		  
     `,
+    styles : [` #a{ margin:  0 2em ;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+    left : 10%;
+    }`],
     
   providers: [ParticipantListService]
 })

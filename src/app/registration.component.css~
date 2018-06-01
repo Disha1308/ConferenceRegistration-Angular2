@@ -1,0 +1,43 @@
+label
+{
+    display: block;
+}
+
+label span
+{
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;	
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 10%;
+}
+
+.nearleft
+{
+top: 32%;
+left : 40%;
+}
+
+.nearright
+{
+top: 32%;
+right: -5%;
+}
+
+/* Control the right side */
+.right {
+top: 32%;	
+  right: -20%;
+}
+
