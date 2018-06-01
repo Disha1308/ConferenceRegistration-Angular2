@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+// App Component to display title of application and output of other templates.
+
 @Component({
   selector: 'my-app',
   template: `<h1>{{title}}</h1>

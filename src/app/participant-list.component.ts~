@@ -1,3 +1,6 @@
+//Component contains the list of participants atttribute and links it to participant list template
+
+
 import { Component, OnInit } from '@angular/core';
 import { Participant } from './participant' ;
 import { ParticipantListService} from './participant-list.service';
@@ -19,20 +22,11 @@ import { ParticipantListService} from './participant-list.service';
     width: 15em;
     left : 10%;
     }`],
-    styles :[`label
-{
-    display: block;
-}
-
-label span
-{
-    display: inline-block;
-    text-align: right;
-    width: 100px;
-}
-`],
+    
   providers: [ParticipantListService]
 })
+
+
 export class ParticipantList  implements OnInit
 { 	
 	title = 'List of Participant'; 

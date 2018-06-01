@@ -1,3 +1,5 @@
+//Component to faciliate user registration
+
 import { Component, OnInit } from '@angular/core';
 import {Participant} from './participant';
 import {HotelListService} from './hotel-list.service';
@@ -26,6 +28,7 @@ export class RegistrationDetails implements OnInit
  	{ 
  	}
  	
+ 	//fetch the list of hotels, payment mode and participant status list using services.
  	ngOnInit() : void
  	{
  		this.participant = this.p;
@@ -34,6 +37,7 @@ export class RegistrationDetails implements OnInit
  	  this.paymentModeList = this.pmodeservice.getpaymentmodelist();
  	}
  	
+ 	//function defined for button : validate the null fields and adds participant using a participant list service
  	addparticipant(p: Participant):void
  	{	console.log(p.name);
  		if (p.name=="Enter name" || p.address =="Enter address" || p.contact == 0)

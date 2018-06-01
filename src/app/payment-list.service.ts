@@ -1,11 +1,15 @@
 import { Injectable} from '@angular/core';
 
+//array to hold the list of currency name
 const PAYMENTMODELIST : String [] = ["Dollars","Rupees", "Euro"]
 
 @Injectable()
 export class PaymentListService 
 {
-
+	/* Funtion : return the list of currency name.
+	   input: void
+	   output: String array of currency name
+	   */
 	getpaymentmodelist() : String[] 
 	{
 		return PAYMENTMODELIST;

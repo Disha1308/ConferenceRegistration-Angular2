@@ -1,3 +1,5 @@
+//Component to contain participant detail and display on participant template.
+
 import { Component, OnInit } from '@angular/core';
 import { Participant } from './participant';
 import { ActivatedRoute, Params }   from '@angular/router';
@@ -47,6 +49,7 @@ export class ParticipantComponent  implements OnInit{
   	private location: Location
 	) {}
 	
+	//Use to fetch the participant using Participant List Service and userid obtained for active URL
 	
 	ngOnInit() : void
 	{  
@@ -56,6 +59,7 @@ export class ParticipantComponent  implements OnInit{
     	
     	}
 	
+	//Back button function to navigate to the previous page.
 	goBack(): void {
   	this.location.back();
 	}

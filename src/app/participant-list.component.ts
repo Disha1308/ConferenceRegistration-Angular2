@@ -1,3 +1,6 @@
+//Component contains the list of participants atttribute and links it to participant list template
+
+
 import { Component, OnInit } from '@angular/core';
 import { Participant } from './participant' ;
 import { ParticipantListService} from './participant-list.service';
@@ -22,6 +25,8 @@ import { ParticipantListService} from './participant-list.service';
     
   providers: [ParticipantListService]
 })
+
+
 export class ParticipantList  implements OnInit
 { 	
 	title = 'List of Participant'; 
@@ -30,6 +35,7 @@ export class ParticipantList  implements OnInit
 	constructor(private plservice: ParticipantListService)
 	{}
 	
+	//Participant list fetched using Participant List service
 	ngOnInit() : void
 	{
 		this.participantList = this.plservice.getparticipantlist();

@@ -1,3 +1,7 @@
+// Contains information about all the components and routing paths.
+
+
+
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
